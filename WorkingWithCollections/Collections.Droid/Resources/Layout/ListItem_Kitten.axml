@@ -4,14 +4,27 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
+    android:background="#D3D3D3"
     android:padding="20dp">
     <Mvx.MvxImageView
+        android:id="@+id/cat_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
         local:MvxBind="ImageUrl ImageUrl" />
     <TextView
-        android:layout_width="fill_parent"
+        android:id="@+id/catname"
+        android:text="my name"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        local:MvxBind="Text Name"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="left"
+        local:MvxBind="Text Name" />
+    <EditText
+        android:text="my nick name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_below="@id/catname"
+        android:hint="enter nickname here"
+        local:MvxBind="Text NickName" />
 </LinearLayout>

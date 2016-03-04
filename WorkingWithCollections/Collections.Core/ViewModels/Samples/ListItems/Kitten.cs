@@ -3,6 +3,7 @@
     public class Kitten : Animal
     {
         public string Name { get; set; }
+        public string NickName { get; set; }
         public string ImageUrl { get; set; }
     }
 }

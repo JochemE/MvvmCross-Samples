@@ -7,54 +7,30 @@ namespace Collections.Core.ViewModels.Samples.ListItems
     {
         private readonly List<string> _names = new List<string>
             {
-                "Buddy"
-                ,
-                "Toby"
-                ,
-                "Ace"
-                ,
-                "AJ"
-                ,
-                "Max"
-                ,
-                "Aztec"
-                ,
-                "Jake"
-                ,
-                "Byron"
-                ,
-                "Axel"
-                ,
-                "Bentley"
-                ,
-                "Cooper"
-                ,
-                "Fuzzy"
-                ,
-                "Bandit"
-                ,
-                "Bear"
-                ,
-                "Charlie"
-                ,
-                "Duke"
-                ,
-                "Marley"
-                ,
-                "Rocky"
-                ,
-                "Shadow"
-                ,
-                "Biscuit"
-                ,
-                "Blaze"
-                ,
-                "Rocky"
-                ,
-                "Buzz"
-                ,
-                "Oreo"
-                ,
+                "Buddy",
+                "Toby",
+                "Ace",
+                "AJ",
+                "Max",
+                "Aztec",
+                "Jake",
+                "Byron",
+                "Axel",
+                "Bentley",
+                "Cooper",
+                "Fuzzy",
+                "Bandit",
+                "Bear",
+                "Charlie",
+                "Duke",
+                "Marley",
+                "Rocky",
+                "Shadow",
+                "Biscuit",
+                "Blaze",
+                "Rocky",
+                "Buzz",
+                "Oreo",
                 "Benji"
             };
 
@@ -62,10 +38,12 @@ namespace Collections.Core.ViewModels.Samples.ListItems
 
         public Dog CreateNewDog()
         {
+            int nextIndex = _random.Next(_names.Count);
+
             return new Dog
             {
-                Name = _names[_random.Next(_names.Count)],
-                ImageUrl = string.Format("http://placedog.com/{0}/{0}", _random.Next(20) + 300)
+                Name = _names[nextIndex],
+                ImageUrl = string.Format("http://loremflickr.com/100/100/dog?{0}", nextIndex)
             };
         }
     }

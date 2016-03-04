@@ -4,17 +4,18 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
+    android:background="@android:color/black"
     android:padding="20dp">
+    <Mvx.MvxImageView
+        android:id="@+id/dog_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        local:MvxBind="ImageUrl ImageUrl" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="0"
+        android:text="my name"
         android:gravity="right"
-        local:MvxBind="Text Name"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-    <Mvx.MvxImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_weight="10"
-        local:MvxBind="ImageUrl ImageUrl" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        local:MvxBind="Text Name" />
 </LinearLayout>
